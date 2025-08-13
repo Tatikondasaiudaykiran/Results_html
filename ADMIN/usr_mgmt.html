@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Management Form</title>
+<style>
+    body {
+        background-color: #FFF5F2;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .form-container {
+        background-color: #E9E3DF;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        text-align: center;
+    }
+    .form-container h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+    label {
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: 1px solid #E2DDB4;
+        font-size: 14px;
+    }
+    .btn {
+        background-color: #DEE8CE;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 8px;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .btn:hover {
+        background-color:#1C352D;
+    }
+</style>
 </head>
 <body>
-    
+
+<div class="form-container">
+    <h2>User Management</h2>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email">
+
+        <label for="role">Role</label>
+        <select id="role" name="role">
+            <option value="Admin">Admin</option>
+            <option value="User">User</option>
+            <option value="Manager">Manager</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password">
+
+        <button type="submit" class="btn">Register User</button>
+    </form>
+</div>
+
 </body>
 </html>

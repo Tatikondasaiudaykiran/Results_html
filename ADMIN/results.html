@@ -1,11 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Result Dashboard</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #eef2f7;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #ffffff; /* Container background */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    /* Navigation buttons */
+    .nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .nav a {
+        background-color: #4a90e2;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+
+    .nav a:hover {
+        background-color: #357ABD;
+    }
+
+    /* Grid table */
+    .grid-table {
+        display: grid;
+        grid-template-columns: 60px 80px 150px 200px 80px 150px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .grid-header {
+        background-color: #4a90e2;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .grid-cell {
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    /* Alternate row background */
+    .grid-cell:nth-child(12n+1),
+    .grid-cell:nth-child(12n+2),
+    .grid-cell:nth-child(12n+3),
+    .grid-cell:nth-child(12n+4),
+    .grid-cell:nth-child(12n+5),
+    .grid-cell:nth-child(12n+6) {
+        background-color: #ffffff;
+    }
+
+    .actions {
+        list-style: disc;
+        padding-left: 20px;
+        margin: 0;
+        text-align: left;
+    }
+</style>
 </head>
 <body>
-    
+
+<div class="container">
+    <h1>Admin Result Dashboard</h1>
+
+    <div class="nav">
+        <a href="#">Add Result</a>
+        <a href="#">Update Result</a>
+        <a href="#">Delete Result</a>
+        <a href="#">Push Notification</a>
+    </div>
+
+    <div class="grid-table">
+        <!-- Header -->
+        <div class="grid-header">S.no</div>
+        <div class="grid-header">RegId</div>
+        <div class="grid-header">Name</div>
+        <div class="grid-header">Course</div>
+        <div class="grid-header">Marks</div>
+        <div class="grid-header">Action</div>
+
+        <!-- Row 1 -->
+        <div class="grid-cell">1</div>
+        <div class="grid-cell">2001</div>
+        <div class="grid-cell">ssasd</div>
+        <div class="grid-cell">Data Structure</div>
+        <div class="grid-cell">86</div>
+        <div class="grid-cell">
+            <ul class="actions">
+                <li>Edit</li>
+                <li>Delete</li>
+            </ul>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="grid-cell">2</div>
+        <div class="grid-cell">2002</div>
+        <div class="grid-cell">Raj</div>
+        <div class="grid-cell">DBMS</div>
+        <div class="grid-cell">90</div>
+        <div class="grid-cell">
+            <ul class="actions">
+                <li>Edit</li>
+                <li>Delete</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
